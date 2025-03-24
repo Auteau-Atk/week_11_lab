@@ -1,0 +1,22 @@
+---
+- name: Setup Frontend Servers
+  hosts: ubuntu
+  become: true
+  gather_facts: yes
+
+  vars:
+    ansible_user: ubuntu
+
+  roles:
+    - frontend
+
+- name: Setup Backend Servers
+  hosts: rocky
+  become: true
+  gather_facts: yes
+
+  vars:
+    ansible_user: rocky
+
+  roles:
+    - backend
