@@ -11,6 +11,7 @@ terraform apply
 
 Apply Ansible configuration
 ```bash
+cd ansible
 ansible-playbook playbook.yml
 ```
 
